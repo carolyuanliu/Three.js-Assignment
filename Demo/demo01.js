@@ -58,29 +58,9 @@ function createCamera(){
   cameraControl = new OrbitControls(camera, renderer.domElement);
 
 //create GUI controller to control camera position and rotation
-  // var cameraZRotation = new THREE.Group();
-  // var cameraYPosition = new THREE.Group();
-  // var cameraZPosition = new THREE.Group();
-  // var cameraXRotation = new THREE.Group();
-  // var cameraYRotation = new THREE.Group();
-  // cameraZRotation.name = 'cameraZRotation';
-  // cameraYPosition.name = 'cameraYPosition';
-  // cameraZPosition.name = 'cameraZPosition';
-  // cameraXRotation.name = 'cameraXRotation';
-  // cameraYRotation.name = 'cameraYRotation';
-  // camera.add(cameraZRotation);
-  // cameraZRotation.add(cameraYPosition);
-  // cameraZPosition.add(cameraYPosition);
-  // cameraXRotation.add(cameraZPosition);
-  // cameraYRotation.add(cameraXRotation);
-  // scene.add(cameraZRotation);
+  
  scene.add(camera);
-  // cameraYPosition.position.y = 10;
-  // cameraZPosition.position.z = 100;
-  // gui.add(cameraZPosition.position, 'z', 0, 100);
-  // gui.add(cameraXRotation.rotation, 'x', -Math.PI, Math.PI);
-  // gui.add(cameraYRotation.rotation, 'y', -Math.PI, Math.PI);
-  // gui.add(cameraZRotation.rotation, 'z', -Math.PI, Math.PI);
+  
 }
 
 //create the cube texture of background
@@ -299,6 +279,7 @@ function loadTV(){
   mainMaterial.metalnessMap = mainMetal;
   mainMaterial.normalMap = mainNorm;
   mainMaterial.roughnessMap = mainRough;
+ 
   //create screen material
   const screenMaterial = new THREE.MeshPhongMaterial({map: screenBase, side: THREE.DoubleSide});
   screenMaterial.aoMap = screenAO;
@@ -682,9 +663,7 @@ allAudioFolder.open()
 function init(){
     scene = new THREE.Scene();
 
-    //
-    // gui.add(spotLight, 'intensity', 0, 10);
-    // gui.add(spotLight.position, 'y', 0, 5);
+   
 
     createHelpers(loadingManager);
     createRenderer();
