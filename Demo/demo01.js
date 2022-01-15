@@ -702,13 +702,7 @@ function init(){
     box1.material.uniforms.delta.value = 0.5+ Math.sin(delta)*0.5;
     box2.material.uniforms.delta.value = 0.5+ Math.cos(delta)*0.5;
     box3.material.uniforms.delta.value = 0.5+ Math.sin(delta)*0.5;
-    // var cameraZPosition = scene.getObjectByName('cameraZPosition');
-    // if (cameraZPosition.position.z > 30 ){
-    //   cameraZPosition.position.z-= 0.25;
-   //     cameraControl.update();
-    // } else{
-    //   cameraControl.update();
-    // }
+    
     requestAnimationFrame(render);
     renderer.render(scene,camera);
   }
